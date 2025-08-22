@@ -1,0 +1,164 @@
+.cnt {
+    position: absolute;
+    top: 95%;
+    left: 2%;
+    display: flex;        
+    gap: 0.5vw;          
+}
+
+.box {
+    position: relative;
+    width: 2vw;
+    height: 2vw;
+    background-color: rgb(58, 58, 58);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid black
+}
+.in {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3vw;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+    overflow: hidden;
+}
+#hp {
+    background-color: rgb(179, 45, 45);
+    width: 0%;
+    height: 100%;
+    border-radius: 6px
+}
+
+#armour {
+    background-color: rgb(30, 45, 175);
+    width: 0%;
+    height: 100%;
+    border-radius: 6px 0 0 6px;
+}
+#hunger {
+    background-color: rgb(151, 98, 19);
+    width: 0%;
+    height: 100%;
+    border-radius: 6px
+}
+
+#thirst {
+    background-color: rgb(54, 149, 212);
+    width: 0%;
+    height: 100%;
+    border-radius: 6px 0 0 6px;
+}
+#stamina {
+    background-color: rgb(9, 92, 34);
+    width: 0%;
+    height: 100%;
+    border-radius: 6px
+}
+
+img{
+    width: 1.5vw;
+    object-fit: cover;
+}
+.cnm2{
+    height: 16vh; 
+    width: 102vw; 
+    background-color: black; 
+    margin-left: -1vw; 
+    margin-top: 70vh; 
+    display: none
+}
+
+.cnm{
+    height: 15vh; 
+    width: 102vw; 
+    background-color: black; 
+    margin-left: -1vw; 
+    margin-top: -1vh;
+    display: none
+}
+
+.speed{
+    margin-left: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80vh;
+    flex-direction: column;
+
+}
+.speed2{
+    color: white;
+    font-size: 3vw;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.speed3{
+    color: white;
+    font-size: 1.5vw;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+
+
+.speed4 {
+    position: relative;
+    width: 10vw;
+    height: 1vw;
+    background-color: rgb(58, 58, 58);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid black;
+    margin-top: 2px;
+}
+.speed5 {
+    background-color: rgb(92, 34, 34);
+    width: 0%;
+    height: 100%;
+    border-radius: 6px;
+    transition: background-color 0.5s ease, width 0.5s ease;
+}
+
+.speedImg{
+    width: 1vw;
+}
+
+.hud2 {
+    position: fixed;
+    top: 20vh;
+    right: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.hudRow {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+.box2 {
+    width: 2vw;
+    height: 2vw;
+    background-color: rgb(58, 58, 58);
+    border-radius: 6px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt2 {
+    font-size: 1vw;
+    color: white;
+    white-space: nowrap;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.img2{
+
+}

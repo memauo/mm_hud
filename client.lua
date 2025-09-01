@@ -1,3 +1,5 @@
+ESX = nil
+PlayerLoaded = false
 SetNuiFocus(true, true)
 ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj)
@@ -24,9 +26,34 @@ RegisterCommand('cinematic', function()
 
 end)
 
+ESX = nil
+PlayerLoaded = false
 
 CreateThread(function()
-    
+    while ESX == nil do
+        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+        Wait(100)
+    end
+
+    while ESX.GetPlayerData().job == nil do
+        Wait(100)
+    end
+
+    ESX.PlayerData = ESX.GetPlayerData()
+    PlayerLoaded = true
+end)
+
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded', function(xPlayer)
+    ESX.PlayerData = xPlayer
+    PlayerLoaded = true
+end)
+
+
+CreateThread(function()
+    while not PlayerLoaded do
+        Wait(500)
+    end
     local minimap = RequestScaleformMovie("minimap") 
     SetMinimapComponentPosition("minimap", "L", "B", -0.01, -0.022, 0.160, 0.220)
     SetMinimapComponentPosition("minimap_mask", "L", "B", -0.01, -0.022, 0.160, 0.220)
@@ -141,3 +168,4 @@ AddEventHandler('esx:setAccountMoney', function(account)
         end
     end
 end)
+
